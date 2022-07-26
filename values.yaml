@@ -1,5 +1,5 @@
 ## example for child
-project_name: app1-mylabs-cz
+project_name: test-mylabs-cz
 cpu_request: 30m
 default_cpu_request: 10m
 cpu_limit: 300m
