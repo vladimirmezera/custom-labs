@@ -1,0 +1,43 @@
+## example for child
+project_name: app1-mylabs-cz
+cpu_request: 30m
+default_cpu_request: 10m
+cpu_limit: 300m
+default_cpu_limit: 100m
+mem_request: 360Mi
+default_mem_request: 120Mi
+mem_limit: 600Mi
+default_mem_limit: 200Mi
+pod_limit: 5
+service_limit: 5
+deployment_limit: 5
+configmap_limit: 5
+secret_limit: 5
+pvc_limit: 10
+ephemeral_storage_request: 60Mi
+default_ephemeral_storage_request: 20Mi
+ephemeral_storage_limit: 1500Mi
+default_ephemeral_storage_limit: 500Mi
+#pvs:
+#  - name: pv-snopek-eu-www-web
+#    size: 100M
+#    server: ftp01.infra.uss
+#    path: /srv/wh/snopek.eu/www/web/
+#    storageClass: sata
+#  - name: pv-snopek-eu-www-log
+#    size: 100M
+#    server: ftp01.infra.uss
+#    path: /srv/wh/snopek.eu/www/log/
+#    storageClass: sata
+#  - name: pv-snopek-eu-rhsurvey-web
+#    size: 100M
+#    server: ftp01.infra.uss
+#    path: /srv/wh/snopek.eu/rhsurvey/web/
+#    storageClass: sata
+#  - name: pv-snopek-eu-rhsurvey-log
+#    size: 100M
+#    server: ftp01.infra.uss
+#    path: /srv/wh/snopek.eu/rhsurvey/log/
+#    storageClass: sata
+
+

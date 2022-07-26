@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: resource-quota
+  namespace: {{ .Values.project_name }}
+spec:
+  hard:
+    pods: {{ .Values.pod_limit }}
+    services: {{ .Values.service_limit }}
+    persistentvolumeclaims: {{ .Values.pvc_limit }}
+    requests.ephemeral-storage: {{ .Values.ephemeral_storage_request }}
+    limits.ephemeral-storage: {{ .Values.ephemeral_storage_limit }}
+    count/deployments.apps: {{ .Values.deployment_limit }}
+    configmaps: {{ .Values.configmap_limit }}
+    secrets: {{ .Values.secret_limit }}
+    requests.cpu: {{ .Values.cpu_request }}
+    requests.memory: {{ .Values.mem_request }}
+    limits.cpu: {{ .Values.cpu_limit }}
+    limits.memory: {{ .Values.mem_limit }}
+

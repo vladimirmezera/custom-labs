@@ -1,0 +1,19 @@
+{{- range $pv := .Values.pvs }}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ $pv.name }}
+  labels:
+    {{ $pv.name }}: "true"
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: {{ $pv.size }}
+  nfs:
+    path: {{ $pv.path }}
+    server: {{ $pv.server }}
+  persistentVolumeReclaimPolicy: Retain
+  volumeMode: Filesystem
+{{- end }}
